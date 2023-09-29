@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Communication\Microservice.Template.Communication.Grpc\Microservice.Template.Communication.Grpc.csproj" />
+    <ProjectReference Include="..\..\Communication\Microservice.Template.Communication.Message\Microservice.Template.Communication.Message.csproj" />
+    <ProjectReference Include="..\..\Communication\Microservice.Template.Communication.Rest\Microservice.Template.Communication.Rest.csproj" />
+    <ProjectReference Include="..\..\ThirdParty\Microservice.Template.ThirdParty.Amadeus\Microservice.Template.ThirdParty.Amadeus.csproj" />
+    <ProjectReference Include="..\Microservice.Template.Persistence\Microservice.Template.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
