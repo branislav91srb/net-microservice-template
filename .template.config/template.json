@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/template.json",
-  "author": "Mads Kristensen",
+  "author": "Branislav Davidovic",
   "classifications": [ "Web" ],
-  "name": "My custom microservice template",
+  "name": "Microservice Template for .NET",
   "shortName": "microservicetemplate",
   "sourceName": "Microservice.Template",
   "identity": "Microservice.Template",
