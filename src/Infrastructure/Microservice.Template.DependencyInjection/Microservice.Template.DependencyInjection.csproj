@@ -7,9 +7,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\Communication\Microservice.Template.Communication.Grpc\Microservice.Template.Communication.Grpc.csproj" Condition="$(gRPC)" />
-		<ProjectReference Include="..\..\Communication\Microservice.Template.Communication.Message\Microservice.Template.Communication.Message.csproj" Condition="$(MessageBroker)" />
-		<ProjectReference Include="..\..\Communication\Microservice.Template.Communication.Rest\Microservice.Template.Communication.Rest.csproj" Condition="$(REST)" />
+		<ProjectReference Include="..\..\Communication\Microservice.Template.Communication.Grpc\Microservice.Template.Communication.Grpc.csproj" Condition="$(EnableGrpc)" />
+		<ProjectReference Include="..\..\Communication\Microservice.Template.Communication.Message\Microservice.Template.Communication.Message.csproj" Condition="$(EnableMessaging)" />
+		<ProjectReference Include="..\..\Communication\Microservice.Template.Communication.Rest\Microservice.Template.Communication.Rest.csproj" Condition="$(EnableREST)" />
 
 		<ProjectReference Include="..\..\ThirdParty\Microservice.Template.ThirdParty.Amadeus\Microservice.Template.ThirdParty.Amadeus.csproj" />
 		<ProjectReference Include="..\Microservice.Template.Persistence\Microservice.Template.Persistence.csproj" />

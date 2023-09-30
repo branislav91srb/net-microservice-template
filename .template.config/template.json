@@ -38,21 +38,24 @@
       "replaces": "{{TargetFramework}}",
       "isRequired": true
     },
-    "REST": {
+    "EnableREST": {
+      "displayName": "REST API",
       "type": "parameter",
-      "description": "Add support for REST (http) communication.",
+      "description": "Add support for REST API (http) communication.",
       "datatype": "bool",
       "defaultValue": "true",
       "isRequired": true
     },
-    "gRPC": {
+    "EnableGrpc": {
+      "displayName": "gRPC",
       "type": "parameter",
       "description": "Add support for gRPC communication.",
       "datatype": "bool",
       "defaultValue": "false",
       "isRequired": true
     },
-    "MessageBroker": {
+    "EnableMessaging": {
+      "displayName": "Message Broker",
       "type": "parameter",
       "description": "Add support for message broker communication.",
       "datatype": "bool",
@@ -77,21 +80,21 @@
           ]
         },
         {
-          "condition": "(!REST)",
+          "condition": "(!EnableREST)",
           "exclude": [
             "src/Communication/Microservice.Template.Communication.Rest/**",
             "src/Infrastructure/Microservice.Template.DependencyInjection/Communication/HttpServicesExtensions.cs"
           ]
         },
         {
-          "condition": "(!gRPC)",
+          "condition": "(!EnableGrpc)",
           "exclude": [
             "src/Communication/Microservice.Template.Communication.Grpc/**",
             "src/Infrastructure/Microservice.Template.DependencyInjection/Communication/GrpcServicesExtensions.cs"
           ]
         },
         {
-          "condition": "(!MessageBroker)",
+          "condition": "(!EnableMessaging)",
           "exclude": [
             "src/Communication/Microservice.Template.Communication.Message/**",
             "src/Infrastructure/Microservice.Template.DependencyInjection/Communication/MessageServicesExtensions.cs"

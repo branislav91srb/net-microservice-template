@@ -26,7 +26,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Communication", "Communication", "{8568C8DB-3B8D-4723-9194-E63CBCC83CBE}"
 EndProject
 
-@*#if(REST)
+@*#if(EnableREST)
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Communication.Rest", "src\Communication\Microservice.Template.Communication.Rest\Microservice.Template.Communication.Rest.csproj", "{E2055E85-9D75-4E8A-AD6F-B53EAAEBEAD8}"
 EndProject
 #endif*@
@@ -34,12 +34,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.ThirdParty.Amadeus", "src\ThirdParty\Microservice.Template.ThirdParty.Amadeus\Microservice.Template.ThirdParty.Amadeus.csproj", "{D7AE75E0-1BAB-46F4-BD62-96F159E5BAE9}"
 EndProject
 
-@*#if(gRPC)
+@*#if(EnableGrpc)
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Communication.Grpc", "src\Communication\Microservice.Template.Communication.Grpc\Microservice.Template.Communication.Grpc.csproj", "{4155E7FB-E944-4E6A-A89C-01B4164D7CFB}"
 EndProject
 #endif*@
 
-@*#if(MessageBroker)
+@*#if(EnableMessaging)
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Communication.Message", "src\Communication\Microservice.Template.Communication.Message\Microservice.Template.Communication.Message.csproj", "{943064A2-702D-410C-BCC6-1BF04A0BB4DB}"
 EndProject
 #endif*@

@@ -14,23 +14,23 @@ namespace Microservice.Template.DependencyInjection
             services.AddPersistance();
             services.AddAmadeusServices();
 
-        @*#if(MessageBroker)
+        @*#if(EnableMessaging)
             services.AddRabbitMq();
         #endif*@
-        @*#if(REST)
+        @*#if(EnableREST)
             services.AddHttpServices();
         #endif*@
-        @*#if(gRPC)
+        @*#if(EnableGrpc)
             services.AddGrpcServices();
         #endif*@
         }
 
         public static void UseHttpAppPipeline(this WebApplication app)
         {
-        @*#if(REST)
+        @*#if(EnableREST)
 		    app.UseHttpCommunication();
         #endif*@
-        @*#if(gRPC)
+        @*#if(EnableGrpc)
             app.UseGrpcCommunication();
         #endif*@
         }
