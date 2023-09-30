@@ -1,5 +1,5 @@
-# net-microservice-template
-Template for microservice project/solution (.NET)
+# Microservice Template for .NET (C#)
+Template for microservice project/solution created using clean architecture
 
 # Install
 1) Clone repository
