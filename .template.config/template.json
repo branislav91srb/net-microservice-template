@@ -61,7 +61,15 @@
       "datatype": "bool",
       "defaultValue": "false",
       "isRequired": true
-    }
+    },
+    "EnableThirdParty": {
+      "displayName": "Third-party",
+      "type": "parameter",
+      "description": "Create third-party example project.",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "isRequired": true
+    },
   },
   "sources": [
     {
@@ -98,6 +106,14 @@
           "exclude": [
             "src/Communication/Microservice.Template.Communication.Message/**",
             "src/Infrastructure/Microservice.Template.DependencyInjection/Communication/MessageServicesExtensions.cs"
+          ]
+        }
+        ,
+        {
+          "condition": "(!EnableThirdParty)",
+          "exclude": [
+            "src/ThirdParty/**",
+            "src/Infrastructure/Microservice.Template.DependencyInjection/ThirdParty/**"
           ]
         }
       ]

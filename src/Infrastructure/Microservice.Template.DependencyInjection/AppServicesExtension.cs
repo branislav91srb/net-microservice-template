@@ -1,5 +1,10 @@
-﻿using Microservice.Template.DependencyInjection.Communication;
+﻿
+@*#if(EnableREST || EnableGrpc || EnableMessaging)
+using Microservice.Template.DependencyInjection.Communication;
+#endif*@
+@*#if(EnableThirdParty)
 using Microservice.Template.DependencyInjection.ThirdParty;
+#endif*@
 using Microservice.Template.DependencyInjection.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -12,8 +17,9 @@ namespace Microservice.Template.DependencyInjection
         public static void AddAppServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddPersistance();
+        @*#if(EnableThirdParty)
             services.AddAmadeusServices();
-
+         #endif*@
         @*#if(EnableMessaging)
             services.AddRabbitMq();
         #endif*@

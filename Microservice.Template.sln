@@ -31,8 +31,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Commu
 EndProject
 #endif*@
 
+@*#if(EnableThirdParty)
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.ThirdParty.Amadeus", "src\ThirdParty\Microservice.Template.ThirdParty.Amadeus\Microservice.Template.ThirdParty.Amadeus.csproj", "{D7AE75E0-1BAB-46F4-BD62-96F159E5BAE9}"
 EndProject
+#endif*@
 
 @*#if(EnableGrpc)
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Communication.Grpc", "src\Communication\Microservice.Template.Communication.Grpc\Microservice.Template.Communication.Grpc.csproj", "{4155E7FB-E944-4E6A-A89C-01B4164D7CFB}"
