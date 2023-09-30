@@ -1,7 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/template.json",
   "author": "Branislav Davidovic",
-  "classifications": [ "Web" ],
+  "classifications": [
+    "Windows",
+    "Linux",
+    "macOS",
+    "Cloud",
+    "Service",
+    "Web"
+  ],
   "name": "Microservice Template for .NET",
   "shortName": "microservicetemplate",
   "sourceName": "Microservice.Template",
@@ -10,5 +17,87 @@
     "language": "C#",
     "type": "solution"
   },
-  "preferNameDirectory": true
+  "preferNameDirectory": false,
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target .NET version for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net6.0"
+        },
+        {
+          "choice": "net7.0"
+        },
+        {
+          "choice": "net8.0"
+        }
+      ],
+      "defaultValue": "net7.0",
+      "replaces": "{{TargetFramework}}",
+      "isRequired": true
+    },
+    "REST": {
+      "type": "parameter",
+      "description": "Add support for REST (http) communication.",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "isRequired": true
+    },
+    "gRPC": {
+      "type": "parameter",
+      "description": "Add support for gRPC communication.",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "isRequired": true
+    },
+    "MessageBroker": {
+      "type": "parameter",
+      "description": "Add support for message broker communication.",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "isRequired": true
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "**/[Bb]in/**",
+            "**/[Oo]bj/**",
+            ".git/**",
+            ".github/**",
+            "**/.vs/**",
+            ".gitignore",
+            ".template.config/**",
+            "LICENSE",
+            "README.md"
+          ]
+        },
+        {
+          "condition": "(!REST)",
+          "exclude": [
+            "src/Communication/Microservice.Template.Communication.Rest/**",
+            "src/Infrastructure/Microservice.Template.DependencyInjection/Communication/HttpServicesExtensions.cs"
+          ]
+        },
+        {
+          "condition": "(!gRPC)",
+          "exclude": [
+            "src/Communication/Microservice.Template.Communication.Grpc/**",
+            "src/Infrastructure/Microservice.Template.DependencyInjection/Communication/GrpcServicesExtensions.cs"
+          ]
+        },
+        {
+          "condition": "(!MessageBroker)",
+          "exclude": [
+            "src/Communication/Microservice.Template.Communication.Message/**",
+            "src/Infrastructure/Microservice.Template.DependencyInjection/Communication/MessageServicesExtensions.cs"
+          ]
+        }
+      ]
+    }
+  ]
 }

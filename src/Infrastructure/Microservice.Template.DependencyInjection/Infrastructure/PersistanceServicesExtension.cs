@@ -3,7 +3,7 @@ using Microservice.Template.Persistence.DbContexts;
 using Microservice.Template.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Microservice.Template.DependencyInjection.Utility
+namespace Microservice.Template.DependencyInjection.Infrastructure
 {
     public static class PersistanceServicesExtension
     {

@@ -7,33 +7,44 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DB8B459B-3F8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3D1B276D-30DB-466B-A6BF-BD5414C64A28}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{FC1B9698-E20E-4F0E-B7E0-3761AB7A44EB}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Api", "src\Microservice.Template.Api\Microservice.Template.Api.csproj", "{74C2826E-5E7A-408D-AC17-0EA05431E52E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.Core", "src\Microservice.Template.Core\Microservice.Template.Core.csproj", "{45ABFAC5-A313-4014-A233-072B4CFDF192}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Core", "src\Microservice.Template.Core\Microservice.Template.Core.csproj", "{45ABFAC5-A313-4014-A233-072B4CFDF192}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.Application", "src\Microservice.Template.Application\Microservice.Template.Application.csproj", "{100B9D72-C002-4350-A5A8-100FD2075706}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Application", "src\Microservice.Template.Application\Microservice.Template.Application.csproj", "{100B9D72-C002-4350-A5A8-100FD2075706}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.Infrastructure", "src\Microservice.Template.Infrastructure\Microservice.Template.Infrastructure.csproj", "{6A4B2A0A-7847-4CFC-828E-BA24E43DDF4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Infrastructure", "src\Infrastructure\Microservice.Template.Infrastructure\Microservice.Template.Infrastructure.csproj", "{6A4B2A0A-7847-4CFC-828E-BA24E43DDF4B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{FC1B9698-E20E-4F0E-B7E0-3761AB7A44EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.DependencyInjection", "src\Infrastructure\Microservice.Template.DependencyInjection\Microservice.Template.DependencyInjection.csproj", "{AC0FC0B3-CEA7-454D-AC84-00E29028C9EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.DependencyInjection", "src\Utility\Microservice.Template.DependencyInjection\Microservice.Template.DependencyInjection.csproj", "{AC0FC0B3-CEA7-454D-AC84-00E29028C9EE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.Persistence", "src\Utility\Microservice.Template.Persistence\Microservice.Template.Persistence.csproj", "{152D0DD0-B481-4245-BE15-53166A8B9CBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Persistence", "src\Infrastructure\Microservice.Template.Persistence\Microservice.Template.Persistence.csproj", "{152D0DD0-B481-4245-BE15-53166A8B9CBE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{DBD0E05C-38A7-4400-B5EC-2045BAA57E69}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Communication", "Communication", "{8568C8DB-3B8D-4723-9194-E63CBCC83CBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.Communication.Rest", "src\Communication\Microservice.Template.Communication.Rest\Microservice.Template.Communication.Rest.csproj", "{E2055E85-9D75-4E8A-AD6F-B53EAAEBEAD8}"
+
+@*#if(REST)
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Communication.Rest", "src\Communication\Microservice.Template.Communication.Rest\Microservice.Template.Communication.Rest.csproj", "{E2055E85-9D75-4E8A-AD6F-B53EAAEBEAD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.ThirdParty.Amadeus", "src\ThirdParty\Microservice.Template.ThirdParty.Amadeus\Microservice.Template.ThirdParty.Amadeus.csproj", "{D7AE75E0-1BAB-46F4-BD62-96F159E5BAE9}"
+#endif*@
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.ThirdParty.Amadeus", "src\ThirdParty\Microservice.Template.ThirdParty.Amadeus\Microservice.Template.ThirdParty.Amadeus.csproj", "{D7AE75E0-1BAB-46F4-BD62-96F159E5BAE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.Communication.Grpc", "src\Communication\Microservice.Template.Communication.Grpc\Microservice.Template.Communication.Grpc.csproj", "{4155E7FB-E944-4E6A-A89C-01B4164D7CFB}"
+
+@*#if(gRPC)
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Communication.Grpc", "src\Communication\Microservice.Template.Communication.Grpc\Microservice.Template.Communication.Grpc.csproj", "{4155E7FB-E944-4E6A-A89C-01B4164D7CFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.Communication.Message", "src\Communication\Microservice.Template.Communication.Message\Microservice.Template.Communication.Message.csproj", "{943064A2-702D-410C-BCC6-1BF04A0BB4DB}"
+#endif*@
+
+@*#if(MessageBroker)
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Communication.Message", "src\Communication\Microservice.Template.Communication.Message\Microservice.Template.Communication.Message.csproj", "{943064A2-702D-410C-BCC6-1BF04A0BB4DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.Api.Tests", "tests\Microservice.Template.Api.Tests\Microservice.Template.Api.Tests.csproj", "{DE550499-6C40-463A-AE59-52CD29A756E1}"
+#endif*@
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Api.Tests", "tests\Microservice.Template.Api.Tests\Microservice.Template.Api.Tests.csproj", "{DE550499-6C40-463A-AE59-52CD29A756E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,7 +104,7 @@ Global
 		{74C2826E-5E7A-408D-AC17-0EA05431E52E} = {DB8B459B-3F81-478D-A24C-389947567DD5}
 		{45ABFAC5-A313-4014-A233-072B4CFDF192} = {DB8B459B-3F81-478D-A24C-389947567DD5}
 		{100B9D72-C002-4350-A5A8-100FD2075706} = {DB8B459B-3F81-478D-A24C-389947567DD5}
-		{6A4B2A0A-7847-4CFC-828E-BA24E43DDF4B} = {DB8B459B-3F81-478D-A24C-389947567DD5}
+		{6A4B2A0A-7847-4CFC-828E-BA24E43DDF4B} = {FC1B9698-E20E-4F0E-B7E0-3761AB7A44EB}
 		{FC1B9698-E20E-4F0E-B7E0-3761AB7A44EB} = {DB8B459B-3F81-478D-A24C-389947567DD5}
 		{AC0FC0B3-CEA7-454D-AC84-00E29028C9EE} = {FC1B9698-E20E-4F0E-B7E0-3761AB7A44EB}
 		{152D0DD0-B481-4245-BE15-53166A8B9CBE} = {FC1B9698-E20E-4F0E-B7E0-3761AB7A44EB}

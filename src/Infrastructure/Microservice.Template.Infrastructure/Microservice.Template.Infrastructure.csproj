@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>{{TargetFramework}}</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microservice.Template.Application\Microservice.Template.Application.csproj" />
+    <ProjectReference Include="..\..\Microservice.Template.Application\Microservice.Template.Application.csproj" />
   </ItemGroup>
 
 </Project>
