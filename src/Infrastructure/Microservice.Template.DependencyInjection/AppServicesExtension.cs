@@ -2,11 +2,14 @@
 @*#if(EnableREST || EnableGrpc || EnableMessaging)
 using Microservice.Template.DependencyInjection.Communication;
 #endif*@
+@*#if(EnableREST || EnableGrpc)
+using Microsoft.AspNetCore.Builder;
+#endif*@
 @*#if(EnableThirdParty)
 using Microservice.Template.DependencyInjection.ThirdParty;
 #endif*@
 using Microservice.Template.DependencyInjection.Infrastructure;
-using Microsoft.AspNetCore.Builder;
+
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -31,6 +34,7 @@ namespace Microservice.Template.DependencyInjection
         #endif*@
         }
 
+    @*#if(EnableREST || EnableGrpc)
         public static void UseHttpAppPipeline(this WebApplication app)
         {
         @*#if(EnableREST)
@@ -40,5 +44,6 @@ namespace Microservice.Template.DependencyInjection
             app.UseGrpcCommunication();
         #endif*@
         }
+    #endif*@
     }
 }

@@ -57,7 +57,7 @@
     "EnableMessaging": {
       "displayName": "Message Broker",
       "type": "parameter",
-      "description": "Add support for message broker communication.",
+      "description": "Add support for message broker communication (example with RabbitMQ).",
       "datatype": "bool",
       "defaultValue": "false",
       "isRequired": true
