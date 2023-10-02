@@ -70,6 +70,14 @@
       "defaultValue": "false",
       "isRequired": true
     },
+    "EnableGrpcClient": {
+      "displayName": "gRPC Client package",
+      "type": "parameter",
+      "description": "Add support for gRPC Client nuget package.",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "isRequired": true
+    }
   },
   "sources": [
     {
@@ -114,6 +122,12 @@
           "exclude": [
             "src/ThirdParty/**",
             "src/Infrastructure/Microservice.Template.DependencyInjection/ThirdParty/**"
+          ]
+        },
+        {
+          "condition": "(!EnableGrpcClient)",
+          "exclude": [
+            "src/Packages/Microservice.Template.Client.Grpc/**"
           ]
         }
       ]
