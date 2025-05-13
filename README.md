@@ -5,7 +5,7 @@ Template for microservice project/solution created using clean architecture
 1) Clone repository
 2) Go to `net-microservice-template` directory
 3) Run command: `dotnet new install .`
-4) Open Visual Studio and clicl `Create a new project`
+4) Open Visual Studio and click `Create a new project`
 5) Choose `Microservice Template for .NET` and click next...
 
 > NOTE: Check the `Place solution and project in the same directory` option while creating a project.
