@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Microservice.Template.Communication.Grpc.Protos.ToDo";
+
+package todos;
+
+
+service ToDoService {
+	rpc GetToDo (GetToDoRequest) returns (GetToDoResponse);
+}
+
+message GetToDoRequest {
+	google.protobuf.Timestamp time = 1;
+}
+
+message GetToDoResponse {
+	int32 id = 1;
+	string title = 2;
+}

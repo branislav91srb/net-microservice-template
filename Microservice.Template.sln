@@ -21,8 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Depen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Persistence", "src\Infrastructure\Microservice.Template.Persistence\Microservice.Template.Persistence.csproj", "{152D0DD0-B481-4245-BE15-53166A8B9CBE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{DBD0E05C-38A7-4400-B5EC-2045BAA57E69}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Communication", "Communication", "{8568C8DB-3B8D-4723-9194-E63CBCC83CBE}"
 EndProject
 
@@ -31,20 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Commu
 EndProject
 #endif*@
 
-@*#if(EnableThirdParty)
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.ThirdParty.Amadeus", "src\ThirdParty\Microservice.Template.ThirdParty.Amadeus\Microservice.Template.ThirdParty.Amadeus.csproj", "{D7AE75E0-1BAB-46F4-BD62-96F159E5BAE9}"
-EndProject
-#endif*@
-
 @*#if(EnableGrpc)
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Communication.Grpc", "src\Communication\Microservice.Template.Communication.Grpc\Microservice.Template.Communication.Grpc.csproj", "{4155E7FB-E944-4E6A-A89C-01B4164D7CFB}"
 EndProject
 #endif*@
 
-@*#if(EnableMessaging)
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Communication.Message", "src\Communication\Microservice.Template.Communication.Message\Microservice.Template.Communication.Message.csproj", "{943064A2-702D-410C-BCC6-1BF04A0BB4DB}"
-EndProject
-#endif*@
 
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Template.Api.Tests", "tests\Microservice.Template.Api.Tests\Microservice.Template.Api.Tests.csproj", "{DE550499-6C40-463A-AE59-52CD29A756E1}"
 EndProject
@@ -53,6 +42,11 @@ EndProject
 
 @*#if(EnableGrpcClient)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Template.Client.Grpc", "src\Packages\Microservice.Template.Client.Grpc\Microservice.Template.Client.Grpc.csproj", "{759010B5-D2BA-4A51-8D19-4FF85F4C3B1C}"
+EndProject
+#endif*@
+
+@*#if(EnableRestClient)
+Project("{CAE04EC1-501F-12D3-BF4E-00C04F79CFBB}") = "Microservice.Template.Client.Rest", "src\Packages\Microservice.Template.Client.Rest\Microservice.Template.Client.Rest.csproj", "{839010B5-F1BA-4A51-8D19-4FF85F4C3B2E}"
 EndProject
 #endif*@
 
@@ -98,10 +92,6 @@ Global
 		{4155E7FB-E944-4E6A-A89C-01B4164D7CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4155E7FB-E944-4E6A-A89C-01B4164D7CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4155E7FB-E944-4E6A-A89C-01B4164D7CFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{943064A2-702D-410C-BCC6-1BF04A0BB4DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{943064A2-702D-410C-BCC6-1BF04A0BB4DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{943064A2-702D-410C-BCC6-1BF04A0BB4DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{943064A2-702D-410C-BCC6-1BF04A0BB4DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE550499-6C40-463A-AE59-52CD29A756E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE550499-6C40-463A-AE59-52CD29A756E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE550499-6C40-463A-AE59-52CD29A756E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -122,15 +112,13 @@ Global
 		{6A4B2A0A-7847-4CFC-828E-BA24E43DDF4B} = {FC1B9698-E20E-4F0E-B7E0-3761AB7A44EB}
 		{AC0FC0B3-CEA7-454D-AC84-00E29028C9EE} = {FC1B9698-E20E-4F0E-B7E0-3761AB7A44EB}
 		{152D0DD0-B481-4245-BE15-53166A8B9CBE} = {FC1B9698-E20E-4F0E-B7E0-3761AB7A44EB}
-		{DBD0E05C-38A7-4400-B5EC-2045BAA57E69} = {DB8B459B-3F81-478D-A24C-389947567DD5}
 		{8568C8DB-3B8D-4723-9194-E63CBCC83CBE} = {DB8B459B-3F81-478D-A24C-389947567DD5}
 		{E2055E85-9D75-4E8A-AD6F-B53EAAEBEAD8} = {8568C8DB-3B8D-4723-9194-E63CBCC83CBE}
-		{D7AE75E0-1BAB-46F4-BD62-96F159E5BAE9} = {DBD0E05C-38A7-4400-B5EC-2045BAA57E69}
 		{4155E7FB-E944-4E6A-A89C-01B4164D7CFB} = {8568C8DB-3B8D-4723-9194-E63CBCC83CBE}
-		{943064A2-702D-410C-BCC6-1BF04A0BB4DB} = {8568C8DB-3B8D-4723-9194-E63CBCC83CBE}
 		{DE550499-6C40-463A-AE59-52CD29A756E1} = {3D1B276D-30DB-466B-A6BF-BD5414C64A28}
 		{095F7658-C7CC-48D8-9A17-CAFAC79A0118} = {DB8B459B-3F81-478D-A24C-389947567DD5}
 		{759010B5-D2BA-4A51-8D19-4FF85F4C3B1C} = {095F7658-C7CC-48D8-9A17-CAFAC79A0118}
+		{839010B5-F1BA-4A51-8D19-4FF85F4C3B2E} = {095F7658-C7CC-48D8-9A17-CAFAC79A0118}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C084FEA4-34C5-4603-AE14-AAA98824DF35}

@@ -13,7 +13,7 @@ namespace Microservice.Template.DependencyInjection.Communication
         {
             services.AddFastEndpoints(config =>
             {
-                config.Assemblies = new[] { typeof(IProjectReference).Assembly };
+                config.Assemblies = [typeof(IProjectReference).Assembly];
             });
             services.AddEndpointsApiExplorer();
             services.SwaggerDocument(o => o.AutoTagPathSegmentIndex = 2);
@@ -28,7 +28,6 @@ namespace Microservice.Template.DependencyInjection.Communication
                 app.UseExceptionHandler("/Error");
             }
 
-            app.UseAuthorization();
             app.UseFastEndpoints();
             app.UseSwaggerGen();
         }

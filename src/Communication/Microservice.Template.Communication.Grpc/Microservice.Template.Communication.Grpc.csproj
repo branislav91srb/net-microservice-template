@@ -27,6 +27,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Protobuf Include="Protos\flights.proto" GrpcServices="Server" Access="Internal" />
+		<Protobuf Include="Protos\todo.proto" GrpcServices="Server" Access="Internal" />
 	</ItemGroup>
 </Project>

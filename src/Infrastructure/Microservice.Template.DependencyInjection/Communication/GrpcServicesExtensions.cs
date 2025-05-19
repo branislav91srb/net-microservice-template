@@ -1,4 +1,4 @@
-﻿using Microservice.Template.Communication.Grpc.Services.Flights;
+﻿using Microservice.Template.Communication.Grpc.Services.ToDo;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,7 +13,7 @@ namespace Microservice.Template.DependencyInjection.Communication
 
         internal static void UseGrpcCommunication(this WebApplication app)
         {
-            app.MapGrpcService<CreateFlightService>();
+            app.MapGrpcService<GetToDoService>();
         }
     }
 }
